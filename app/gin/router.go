@@ -33,5 +33,9 @@ func Router() *g.Engine {
 		ctx.HTML(200, "login.html", nil)
 	})
 
+	gin.GET("/profile", func(ctx *g.Context) {
+		ctx.HTML(200, "account-profile.html", nil)
+	})
+
 	return gin
 }
