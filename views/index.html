@@ -12,6 +12,11 @@
 	<script src="/static/js/index.js"></script>
 	<link rel="stylesheet" href="./assets/compiled/css/app.css">
 	<link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
+	<script src="static/js/main.js"></script>
+
+	<!-- table -->
+	<link rel="stylesheet" href="/static/css/r1.css">
+    <link rel="stylesheet" href="/static/css/r2.css">
 </head>
 
 <body>
@@ -22,7 +27,7 @@
 				<div class="sidebar-header position-relative" style="padding: 10px;">
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="logo">
-							<a href="index.html"><img src="static/images/local/WazzPay.png" alt="Logo" srcset=""></a>
+							<a href="index.html"><img src="static/images/local/WazzPay.png" alt="Logo" srcset="" style="height: 25px;"></a>
 						</div>
 						<div class="theme-toggle d-flex gap-2  align-items-center mt-2">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,7 +71,7 @@
 								<span>Kelola</span>
 							</a>
 							<ul class="submenu" style="padding-left: 20px;">
-								<li class="submenu-item">
+								<li class="submenu-item active">
 									<a href="/" class="submenu-link">List Rumah Warga</a>
 								</li>
 
@@ -154,6 +159,7 @@
 					</div>
 				</nav>
 			</header>
+
 			<div id="main-content" style="padding: 15px;">
 
 				<div class="page-heading">
@@ -161,7 +167,6 @@
 						<div class="row">
 							<div class="col-12 col-md-6 order-md-1 order-last">
 								<h3>List Rumah Warga</h3>
-								<p class="text-subtitle text-muted">Navbar will appear on the top of the page.</p>
 							</div>
 							<div class="col-12 col-md-6 order-md-2 order-first">
 								<nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -173,81 +178,171 @@
 							</div>
 						</div>
 					</div>
+
 					<section class="section">
 						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">About Vertical Navbar</h4>
-							</div>
-							<div class="card-body">
-								<p>Vertical Navbar is a layout option that you can use with Mazer. </p>
-
-								<p>In case you want the navbar to be sticky on top while scrolling, add
-									<code>.navbar-fixed</code> class alongside with <code>.layout-navbar</code> class.
-								</p>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">Dummy Text</h4>
-							</div>
-							<div class="card-body">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis tincidunt tempus.
-									Duis vitae facilisis enim, at rutrum lacus. Nam at nisl ut ex egestas placerat
-									sodales id quam. Aenean sit amet nibh quis lacus pellentesque venenatis vitae at
-									justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-									ridiculus mus. Suspendisse venenatis tincidunt odio ut rutrum. Maecenas ut urna
-									venenatis, dapibus tortor sed, ultrices justo. Phasellus scelerisque, nibh quis
-									gravida venenatis, nibh mi lacinia est, et porta purus nisi eget nibh. Fusce pretium
-									vestibulum sagittis. Donec sodales velit cursus convallis sollicitudin. Nunc vel
-									scelerisque elit, eget facilisis tellus. Donec id molestie ipsum. Nunc tincidunt
-									tellus sed felis vulputate euismod.
-								</p>
-								<p>
-									Proin accumsan nec arcu sit amet volutpat. Proin non risus luctus, tempus quam quis,
-									volutpat orci. Phasellus commodo arcu dui, ut convallis quam sodales maximus. Aenean
-									sollicitudin massa a quam fermentum, et efficitur metus convallis. Curabitur nec
-									laoreet ipsum, eu congue sem. Nunc pellentesque quis erat at gravida. Vestibulum
-									dapibus efficitur felis, vel luctus libero congue eget. Donec mollis pellentesque
-									arcu, eu commodo nunc porta sit amet. In commodo augue id mauris tempor, sed
-									dignissim nulla facilisis. Ut non mattis justo, ut placerat justo. Vestibulum
-									scelerisque cursus facilisis. Suspendisse velit justo, scelerisque ac ultrices eu,
-									consectetur ac odio.
-								</p>
-								<p>
-									In pharetra quam vel lobortis fermentum. Nulla vel risus ut sapien porttitor
-									volutpat eu ac lorem. Vestibulum porta elit magna, ut ultrices sem fermentum ut.
-									Vestibulum blandit eros ut imperdiet porttitor. Pellentesque tempus nunc sed augue
-									auctor eleifend. Sed nisi sem, lobortis eget faucibus placerat, hendrerit vitae
-									elit. Vestibulum elit orci, pretium vel libero at, imperdiet congue lectus. Praesent
-									rutrum id turpis non aliquam. Cras dignissim, metus vitae aliquam faucibus, elit
-									augue dignissim nulla, bibendum consectetur leo libero a tortor. Vestibulum non
-									tincidunt nibh. Ut imperdiet elit vel vehicula ultricies. Nulla maximus justo sit
-									amet fringilla laoreet. Aliquam malesuada diam in augue mattis aliquam. Pellentesque
-									id eros dignissim, dapibus sem ac, molestie dolor. Mauris purus lacus, tempor sit
-									amet vestibulum vitae, ultrices eu urna.
-								</p>
+							<div class="card-body" style="overflow-x: scroll;">
+								<table class="table table-striped" id="table1" style="border: 1px solid rgb(235, 230, 230);">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Nama Pemilik</th>
+											<th>Nomor Rumah</th>
+											<th>Telepon</th>
+											<th>Email</th>
+											<th>Status</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody id="tbody"></tbody>
+								</table>
 							</div>
 						</div>
 					</section>
 				</div>
 
 			</div>
-			<footer>
-				<div class="footer clearfix mb-0 text-muted">
-					<div class="float-start">
-						<p>2023 &copy; Mazer</p>
-					</div>
-					<div class="float-end">
-						<p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
-							by <a href="https://saugi.me">Saugi</a></p>
-					</div>
-				</div>
-			</footer>
+			
+			<footer></footer>
 		</div>
 	</div>
 	<script src="assets/static/js/components/dark.js"></script>
 	<script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script src="assets/compiled/js/app.js"></script>
+	
+	<!-- js table -->
+	<script src="/static/js/r1.js"></script>
+    <script src="/static/js/r2.js"></script>
+    <script src="/static/js/r3.js"></script>
+    <script src="/static/js/r4.js"></script>
+    <script src="/static/js/r5.js"></script>
+    <script src="/static/js/r6.js"></script>
+    <script src="/static/js/r7.js"></script>
+    <script src="/static/js/r8.js"></script>
+    
+	<script>
+		// <tr>
+		// 	<td>Emmanuel</td>
+		// 	<td>eget.lacus.Mauris@feugiatSednec.org</td>
+		// 	<td>(016977) 8208</td>
+		// 	<td>Saint-Remy-Geest</td>
+		// 	<td>
+		// 		<span class="badge bg-success">Active</span>
+		// 	</td>
+		// </tr>
+
+		function createDataTable(p) {
+			const tr = createElement("tr")
+			const tdID = createElement("td")
+			tdID.innerHTML = p.ID
+			const tdNamaPemilik = createElement("td")
+			tdNamaPemilik.innerHTML = p.NamaPemilik
+			const tdNomerRumah = createElement("td")
+			tdNomerRumah.innerHTML = p.NomoRumah
+			const tdTelepon = createElement("td")
+			tdTelepon.innerHTML = p.HpPemilik
+			const tdEmail = createElement("td")
+			tdEmail.innerHTML = p.EmailPemilik
+			const tdStatus = createElement("td")
+			const tdStatusSpan = createElement("span")
+			tdStatusSpan.setAttribute("class", "badge bg-success")
+			tdStatusSpan.innerHTML = p.Status
+			tdStatus.appendChild(tdStatusSpan)
+			const tdDetails = createElement("td")
+			const tdDetailsSpan = createElement("span")
+			tdDetailsSpan.setAttribute("class", "badge bg-info")
+			tdDetailsSpan.innerHTML = "Details"
+			tdDetails.appendChild(tdDetailsSpan)
+
+			tr.appendChild(tdID)
+			tr.appendChild(tdNamaPemilik)
+			tr.appendChild(tdNomerRumah)
+			tr.appendChild(tdTelepon)
+			tr.appendChild(tdEmail)
+			tr.appendChild(tdStatus)
+			tr.appendChild(tdDetails)
+			tr.addEventListener("click", function() {
+				tr.style.backgroundColor = ""
+			})
+			return tr
+		}
+
+		// createDataTable()
+
+		(async function() {
+			function ckLa() {
+				const ls = localStorage.getItem("ls")
+				if (!ls || ls == null) {
+					return false
+				}
+				try {
+					const lsObj = JSON.parse(ls)
+					if (!lsObj.at || !lsObj.rt) {
+						return false
+					}
+					return lsObj
+				} catch (error) {
+					return false
+				}
+			}
+			const actk = ckLa()
+			if (!actk) {
+				window.location = "/login"
+				return
+			}
+			const body = JSON.stringify({
+				"page": 1,
+				"limit": 10,
+				"search" : [
+					{
+						"field": "nomo_rumah",
+						"value": ""
+					},
+						{
+						"field": "nama_pemilik",
+						"value": ""
+					},
+						{
+						"field": "email_pemilik",
+						"value": ""
+					},
+						{
+						"field": "hp_pemilik",
+						"value": ""
+					}
+				],
+				"sort": []
+			})
+
+			const request = await fetch("https://api.wazzpay.com/api/v1/ipl/unit-list", {
+				method: "POST",
+				headers: {
+					"Authorization": `Bearer ${actk.at}`,
+					"content-type": "application/json"
+				},
+				body: body
+			})
+
+			const response = await request
+			if (response.status != 200) {
+				return alert("failed fetch data list warga")
+			}
+			const items = (await response.json()).data.items
+			console.log(items[0])
+			const tBody = document.getElementById("tbody")
+			for(var i = 0; i < items.length; i++) {
+				tBody.appendChild(createDataTable(items[i]))
+			}
+			$(document).ready(function() {
+				$('#table1').DataTable( {
+					dom: 'Bfrtip',
+					buttons: [
+						'copy', 'csv', 'excel', 'pdf', 'print'
+					]
+				} );
+			});
+		})()
+	</script>
 </body>
+
 </html>
