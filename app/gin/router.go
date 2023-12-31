@@ -29,6 +29,18 @@ func Router() *g.Engine {
 		ctx.HTML(200, "index.html", nil)
 	})
 
+	gin.GET("/list_ipl_recurring", func(ctx *g.Context) {
+		ctx.HTML(200, "list_ipl_recurring.html", nil)
+	})
+
+	gin.GET("/transaksi", func(ctx *g.Context) {
+		ctx.HTML(200, "kelola-transaksi.html", nil)
+	})
+
+	gin.GET("/kas", func(ctx *g.Context) {
+		ctx.HTML(200, "kas.html", nil)
+	})
+
 	gin.GET("/login", func(ctx *g.Context) {
 		ctx.HTML(200, "login.html", nil)
 	})

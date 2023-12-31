@@ -13,10 +13,6 @@
 	<link rel="stylesheet" href="./assets/compiled/css/app.css">
 	<link rel="stylesheet" href="./assets/compiled/css/app-dark.css">
 	<script src="static/js/main.js"></script>
-
-	<!-- table -->
-	<link rel="stylesheet" href="/static/css/r1.css">
-	<link rel="stylesheet" href="/static/css/r2.css">
 </head>
 
 <body>
@@ -27,8 +23,7 @@
 				<div class="sidebar-header position-relative" style="padding: 10px;">
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="logo">
-							<a href="/"><img src="static/images/local/WazzPay.png" alt="Logo" srcset=""
-									style="height: 25px;"></a>
+							<a href="index.html"><img src="static/images/local/WazzPay.png" alt="Logo" srcset="" style="height: 25px;"></a>
 						</div>
 						<div class="theme-toggle d-flex gap-2  align-items-center mt-2">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -64,39 +59,39 @@
 				</div>
 
 				<div class="sidebar-menu">
-					<ul class="menu" style="margin: 0; padding: 10px;">
-						<li class="sidebar-title">Menu</li>
-						<li class="sidebar-item active has-sub">
-							<a href="#" class='sidebar-link'>
-								<i class="bi bi-grid-1x2-fill"></i>
-								<span>Kelola</span>
-							</a>
-							<ul class="submenu" style="padding-left: 20px;">
-								<li class="submenu-item active">
-									<a href="/" class="submenu-link">List Rumah Warga</a>
-								</li>
+                    <ul class="menu" style="margin: 0; padding: 10px;">
+                        <li class="sidebar-title">Menu</li>
+                        <li class="sidebar-item active has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Kelola</span>
+                            </a>
+                            <ul class="submenu" style="padding-left: 20px;">
+                                <li class="submenu-item">
+                                    <a href="/" class="submenu-link">List Rumah Warga</a>
+                                </li>
 
-								<li class="submenu-item">
-									<a href="/list_ipl_recurring" class="submenu-link">List IPL Recurring</a>
-								</li>
+                                <li class="submenu-item active">
+                                    <a href="/list_ipl_recurring" class="submenu-link">List IPL Recurring</a>
+                                </li>
 
-								<li class="submenu-item">
-									<a href="/transaksi" class="submenu-link">Transaksi</a>
-								</li>
+                                <li class="submenu-item">
+                                    <a href="/transaksi" class="submenu-link">Transaksi</a>
+                                </li>
 
-								<li class="submenu-item">
-									<a href="/kas" class="submenu-link">Update transaksi manual (KAS)</a>
-								</li>
-							</ul>
-						</li>
-						<li class="sidebar-item">
-							<a href="/profile" class='sidebar-link'>
-								<i class="bi bi-person-circle"></i>
-								<span>Account</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+                                <li class="submenu-item">
+                                    <a href="/kas" class="submenu-link">Update transaksi manual (KAS)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/profile" class='sidebar-link'>
+                                <i class="bi bi-person-circle"></i>
+                                <span>Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 			</div>
 		</div>
 
@@ -167,13 +162,13 @@
 					<div class="page-title">
 						<div class="row">
 							<div class="col-12 col-md-6 order-md-1 order-last">
-								<h3>List Rumah Warga</h3>
+								<h3>List IPL Recurring</h3>
 							</div>
 							<div class="col-12 col-md-6 order-md-2 order-first">
 								<nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
 									<ol class="breadcrumb">
 										<li class="breadcrumb-item"><a href="/">Kelola</a></li>
-										<li class="breadcrumb-item active" aria-current="page">List Rumah Warga</li>
+										<li class="breadcrumb-item active" aria-current="page">List IPL Recurring</li>
 									</ol>
 								</nav>
 							</div>
@@ -181,215 +176,18 @@
 					</div>
 
 					<section class="section">
-						<div class="card">
-							<div class="card-body" style="overflow-x: scroll;">
-								<div style="width: 200px;">
-									<div class="form-group position-relative has-icon-right">
-										<input type="text" class="form-control"
-											placeholder="Search">
-									</div>
-								</div>
-
-								<table class="table table-striped" id="table1"
-									style="border: 1px solid rgb(235, 230, 230);">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Nama Pemilik</th>
-											<th>Nomor Rumah</th>
-											<th>Telepon</th>
-											<th>Email</th>
-											<th>Status</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody id="tbody"></tbody>
-								</table>
-								<nav aria-label="Page navigation example" style="margin-top: 10px;">
-									<ul class="pagination pagination-primary  justify-content-end">
-										<li class="page-item disabled">
-											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-										</li>
-										<li class="page-item active"><a class="page-link" href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item">
-											<a class="page-link" href="#">Next</a>
-										</li>
-									</ul>
-								</nav>
-							</div>
-						</div>
+						
 					</section>
 				</div>
 
-				<!--scrolling content Modal -->
-				<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
-					aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-
-					<!-- body modal -->
-					<div class="modal-dialog modal-dialog-scrollable" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalScrollableTitle">
-									Scrolling long
-									Content</h5>
-								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-									<i data-feather="x"></i>
-								</button>
-							</div>
-							<div class="modal-body">Detail Infomation</div>
-							<div class="modal-footer"></div>
-						</div>
-					</div>
-
-				</div>
 			</div>
-
+			
 			<footer></footer>
 		</div>
 	</div>
 	<script src="assets/static/js/components/dark.js"></script>
 	<script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script src="assets/compiled/js/app.js"></script>
-
-	<!-- js table -->
-	<script src="/static/js/r1.js"></script>
-	<script src="/static/js/r2.js"></script>
-	<script src="/static/js/r3.js"></script>
-	<script src="/static/js/r4.js"></script>
-	<script src="/static/js/r5.js"></script>
-	<script src="/static/js/r6.js"></script>
-	<script src="/static/js/r7.js"></script>
-	<script src="/static/js/r8.js"></script>
-
-	<script>
-		const modalTitle = document.getElementById("exampleModalScrollableTitle")
-		function createDataTable(p) {
-			const tr = createElement("tr")
-			const tdID = createElement("td")
-			tdID.innerText = p.ID
-			const tdNamaPemilik = createElement("td")
-			tdNamaPemilik.innerText = p.NamaPemilik
-			const tdNomerRumah = createElement("td")
-			tdNomerRumah.innerText = p.NomoRumah
-			const tdTelepon = createElement("td")
-			tdTelepon.innerText = p.HpPemilik
-			const tdEmail = createElement("td")
-			tdEmail.innerText = p.EmailPemilik
-			const tdStatus = createElement("td")
-			const tdStatusSpan = createElement("span")
-			tdStatusSpan.setAttribute("class", "badge bg-success")
-			tdStatusSpan.innerText = p.Status
-			tdStatus.appendChild(tdStatusSpan)
-			const tdDetails = createElement("td")
-			const tdDetailsSpan = createElement("span")
-			tdDetailsSpan.setAttribute("class", "badge bg-info")
-			tdDetailsSpan.setAttribute("data-bs-toggle", "modal")
-			tdDetailsSpan.setAttribute("data-bs-target", "#exampleModalScrollable")
-			tdDetailsSpan.innerText = "Details"
-			tdDetailsSpan.addEventListener("click", function() {
-				modalTitle.innerText = p.NamaPemilik
-			})
-			tdDetailsSpan.addEventListener("mouseover", function () {
-				this.style.color = "blue"
-			})
-			tdDetailsSpan.addEventListener("mouseleave", function () {
-				this.style.color = "white"
-			})
-			tdDetails.style.cursor = "pointer"
-			tdDetails.appendChild(tdDetailsSpan)
-
-			tr.appendChild(tdID)
-			tr.appendChild(tdNamaPemilik)
-			tr.appendChild(tdNomerRumah)
-			tr.appendChild(tdTelepon)
-			tr.appendChild(tdEmail)
-			tr.appendChild(tdStatus)
-			tr.appendChild(tdDetails)
-			tr.addEventListener("click", function () {
-				tr.style.backgroundColor = ""
-			})
-			return tr
-		}
-
-		(async function () {
-			function ckLa() {
-				const ls = localStorage.getItem("ls")
-				if (!ls || ls == null) {
-					return false
-				}
-				try {
-					const lsObj = JSON.parse(ls)
-					if (!lsObj.at || !lsObj.rt) {
-						return false
-					}
-					return lsObj
-				} catch (error) {
-					return false
-				}
-			}
-			const actk = ckLa()
-			if (!actk) {
-				window.location = "/login"
-				return
-			}
-			const body = JSON.stringify({
-				"page": 1,
-				"limit": 10,
-				"search": [
-					{
-						"field": "nomo_rumah",
-						"value": ""
-					},
-					{
-						"field": "nama_pemilik",
-						"value": ""
-					},
-					{
-						"field": "email_pemilik",
-						"value": ""
-					},
-					{
-						"field": "hp_pemilik",
-						"value": ""
-					}
-				],
-				"sort": []
-			})
-
-			const request = await fetch("https://api.wazzpay.com/api/v1/ipl/unit-list", {
-				method: "POST",
-				headers: {
-					"Authorization": `Bearer ${actk.at}`,
-					"content-type": "application/json"
-				},
-				body: body
-			})
-
-			const response = await request
-			if (response.status != 200) {
-				return alert("failed fetch data list warga")
-			}
-			const items = (await response.json()).data.items
-			console.log(items[0])
-			const tBody = document.getElementById("tbody")
-			for (var i = 0; i < items.length; i++) {
-				tBody.appendChild(createDataTable(items[i]))
-			}
-			$(document).ready(function () {
-				$('#table1').DataTable({
-					searching: false,
-					dom: 'frtpB',
-					buttons: [
-						'copy', 'csv', 'excel', 'pdf', 'print'
-					],
-					"bPaginate": false,
-					"bInfo" : false
-				});
-			});
-		})()
-	</script>
 </body>
 
 </html>
